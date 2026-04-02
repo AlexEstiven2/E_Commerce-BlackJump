@@ -3,11 +3,11 @@ import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
 import { ConectarDB } from "./Config/Database.js";
+import "./Models/Asociaciones.js"
 
 dotenv.config();
 
 const app = express();
-// Cargará el 8080 de tu .env
 const PORT = process.env.PORT || 5000; 
 
 ConectarDB();
