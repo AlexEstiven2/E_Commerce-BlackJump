@@ -1,10 +1,11 @@
+import PaginaDeAutenticacion from "./paginas/pagina_de_autenticacion/PaginaDeAutenticacion";
+
 function App() {
   return (
-    <div style={{ textAlign: 'center', marginTop: '50px' }}>
-      <h1>BlackJump E-Commerce</h1>
-      <p>Conexión lista para recibir datos</p>
-    </div>
-  )
+    <>
+      <PaginaDeAutenticacion />
+    </>
+  );
 }
 
 export default App;
