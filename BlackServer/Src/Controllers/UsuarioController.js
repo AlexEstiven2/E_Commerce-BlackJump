@@ -18,7 +18,6 @@ export const obtenerUsuarios = async (req, res) => {
 export const crearUsuario = async (req, res) => {
     try {
         const { NOMBRE, EMAIL, PASSWORD, ID_ROL_REF, IMAGEN_USUARIO } = req.body;
-
         // Encriptar contraseña
         const salt = await bcrypt.genSalt(10);
         const passwordEncriptada = await bcrypt.hash(PASSWORD, salt);

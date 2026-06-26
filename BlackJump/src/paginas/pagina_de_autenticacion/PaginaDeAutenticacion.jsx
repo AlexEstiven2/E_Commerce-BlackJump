@@ -15,12 +15,12 @@
 import { useState } from "react";
 import FormularioDeInicioDeSesion from "../../componentes/autenticacion/FormularioDeInicioDeSesion";
 import FormularioDeRegistro from "../../componentes/autenticacion/FormularioDeRegistro";
-import "./PaginaDeAutenticacion.css";
+
 export default function PaginaDeAutenticacion() {
   const [mode, setMode] = useState("sesion"); // "Iniciar sesion" o "Registrarse"
 
   return (
-    <div className="pagina-de-autenticacion">
+    <div className="w-full h-screen flex flex-col items-center justify-center bg-gray-100">
       <h1>Autenticación</h1>
       <h2>{mode === "sesion" ? "Iniciar Sesión" : "Registrarse"}</h2>
 

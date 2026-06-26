@@ -19,21 +19,12 @@ export default function SignupForm() {
   return (
     <>
       <form>
-        <div className="contenedor-de-imagen">
-          <img
-            className="imagen-de-perfil"
-            src={imagenGuardada}
-            alt="Imagen de perfil"
-          />
-          <input
-            type="file"
-            accept="image/*"
-            onChange={gestionarCambioDeArchivo}
-          />
-        </div>
         <input type="text" placeholder="Nombre" />
         <input type="email" placeholder="Correo" />
+        <input type="email" placeholder="Confirmar Correo" />
         <input type="password" placeholder="Contraseña" />
+        <br />
+        <br />
         <button type="submit">Registrarse</button>
       </form>
     </>
