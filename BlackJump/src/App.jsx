@@ -1,4 +1,4 @@
-import PaginaDeAutenticacion from "./paginas/PaginaDeAutenticacion";
+import { PaginaDeAutenticacion, PaginaDelPanel } from "@paginas";
 
 function App() {
   return (
