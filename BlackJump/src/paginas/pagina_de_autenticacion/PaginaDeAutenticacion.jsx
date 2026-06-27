@@ -15,6 +15,7 @@
 import { useState, useEffect } from "react";
 import FormularioDeInicioDeSesion from "../../componentes/autenticacion/FormularioDeInicioDeSesion";
 import FormularioDeRegistro from "../../componentes/autenticacion/FormularioDeRegistro";
+import { Button, Card } from "@reutilizables";
 
 export default function PaginaDeAutenticacion() {
   const [sesion, setSesion] = useState("sesion"); // "Iniciar sesion" o "Registrarse"
@@ -28,12 +29,7 @@ export default function PaginaDeAutenticacion() {
     return () => clearTimeout(timeout);
   }, [sesion]);
   return (
-    <div
-      className={`min-h-screen bg-black text-white flex items-center justify-center px-4`}
-    >
-      <div
-        className={`w-full max-w-3xl rounded-[1rem] bg-black border border-gray-700 shadow-xl/30 shadow-gray-800  p-8 md:p-12 inset-shadow-sm inset-shadow-gray-500/50`}
-      >
+    <Card>
         <div className="space-y-3 text-center">
           <h1 className="text-4xl font-semibold tracking-tight text-white">
             Autenticación
@@ -45,26 +41,22 @@ export default function PaginaDeAutenticacion() {
 
         {/* Botones para alternar */}
         <div className="flex justify-center space-x-4 mt-4">
-          <button
-            className={`px-4 py-2 rounded cursor-pointer ${
-              sesion === "sesion"
-                ? "bg-white border border-gray-800 shadow-lg/50 shadow-gray-800 text-gray-600 inset-shadow-sm inset-shadow-gray-800/50"
-                : "bg-black border border-gray-700 shadow-lg/50 shadow-gray-800 text-white inset-shadow-sm inset-shadow-gray-500/50"
-            }`}
+          <Button
+            type="button"
+            variant={sesion === "sesion" ? "light" : "ghost"}
+            className="w=auto min-w-[170px] px-4 py-2 rounded cursor-pointer"
             onClick={() => setSesion("sesion")}
           >
             Iniciar Sesión
-          </button>
-          <button
-            className={`px-4 py-2 rounded cursor-pointer ${
-              sesion === "registro"
-                ? "bg-white border border-gray-800 shadow-lg/50 shadow-gray-800 text-gray-600 inset-shadow-sm inset-shadow-gray-800/50"
-                : "bg-black border border-gray-700 shadow-lg/50 shadow-gray-800 text-white inset-shadow-sm inset-shadow-gray-500/50"
-            }`}
+          </Button>
+          <Button
+            type="button"
+            variant={sesion === "registro" ? "light" : "ghost"}
+            className="w=auto min-w-[170px] px-4 py-2 rounded cursor-pointer"
             onClick={() => setSesion("registro")}
           >
             Registrarse
-          </button>
+          </Button>
         </div>
         <div
           className={`mt-6 transition-all duration-700 ease-in-out ${
@@ -77,7 +69,6 @@ export default function PaginaDeAutenticacion() {
             <FormularioDeRegistro />
           )}
         </div>
-      </div>
-    </div>
+    </Card>
   );
 }
