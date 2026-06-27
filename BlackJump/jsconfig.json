@@ -6,6 +6,9 @@
             "@/*": [
                 "src/*"
             ],
+            "@rutas/*": [
+                "src/rutas/*"
+            ],
             "@reutilizables/*": [
                 "src/componentes/reutilizables/*"
             ],
