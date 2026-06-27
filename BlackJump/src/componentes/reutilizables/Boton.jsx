@@ -1,5 +1,5 @@
 // Button.jsx
-export default function Button({
+export default function Boton({
   children,
   variant = "primary",
   className = "",

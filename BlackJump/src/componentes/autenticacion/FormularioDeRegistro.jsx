@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { Input, Button } from "@reutilizables";
-export default function SignupForm() {
+import { Input, Boton } from "@reutilizables";
+export default function FormularioDeRegistro() {
   const [imagenGuardada, setImagenGuardada] = useState(
     localStorage.getItem("imagenPerfil") || null,
   );
@@ -38,11 +38,11 @@ export default function SignupForm() {
         />
         <br />
         <br />
-        <Button
+        <Boton
           type="submit"
         >
           Registrarse
-        </Button>
+        </Boton>
       </form>
     </>
   );

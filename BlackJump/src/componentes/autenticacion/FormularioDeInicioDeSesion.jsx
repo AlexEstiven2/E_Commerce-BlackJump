@@ -1,5 +1,5 @@
-import { Button, Input } from "@reutilizables";
-export default function LoginForm() {
+import { Boton, Input } from "@reutilizables";
+export default function FormularioDeInicioDeSesion() {
   return (
     <form className={`space-y-4 flex flex-col justify-center items-center`}>
       <Input
@@ -10,11 +10,11 @@ export default function LoginForm() {
         type="password"
         placeholder="Contraseña"
       />
-      <Button
+      <Boton
         type="submit"
       >
         Entrar
-      </Button>
+      </Boton>
     </form>
   );
 }

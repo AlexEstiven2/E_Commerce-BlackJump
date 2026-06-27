@@ -1,4 +1,4 @@
-export { default as Button } from "./Button";
+export { default as Boton } from "./Boton";
 export { default as Input } from "./Input";
-export { default as Card } from "./Card";
-export { default as PageContainer } from "./PageContainer";
+export { default as Targeta } from "./Targeta";
+export { default as ContenedorDePagina } from "./ContenedorDePagina";
