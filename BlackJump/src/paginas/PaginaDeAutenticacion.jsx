@@ -13,9 +13,12 @@
  */
 
 import { useState, useEffect } from "react";
-import FormularioDeInicioDeSesion from "../componentes/autenticacion/FormularioDeInicioDeSesion";
-import FormularioDeRegistro from "../componentes/autenticacion/FormularioDeRegistro";
+import {
+  FormularioDeInicioDeSesion,
+  FormularioDeRegistro,
+} from "@autenticacion";
 import { Button, Card } from "@reutilizables";
+import { PageContainer } from "@/componentes/reutilizables";
 
 export default function PaginaDeAutenticacion() {
   const [sesion, setSesion] = useState("sesion"); // "Iniciar sesion" o "Registrarse"
@@ -29,46 +32,48 @@ export default function PaginaDeAutenticacion() {
     return () => clearTimeout(timeout);
   }, [sesion]);
   return (
-    <Card>
-      <div className="space-y-3 text-center">
-        <h1 className="text-4xl font-semibold tracking-tight text-white">
-          Autenticación
-        </h1>
-        <h2 className="text-gray-400 text-lg">
-          {sesion === "sesion" ? "Iniciar Sesión" : "Registrarse"}
-        </h2>
-      </div>
+    <PageContainer>
+      <Card>
+        <div className="space-y-3 text-center">
+          <h1 className="text-4xl font-semibold tracking-tight text-white">
+            Autenticación
+          </h1>
+          <h2 className="text-gray-400 text-lg">
+            {sesion === "sesion" ? "Iniciar Sesión" : "Registrarse"}
+          </h2>
+        </div>
 
-      {/* Botones para alternar */}
-      <div className="flex justify-center space-x-4 mt-4">
-        <Button
-          type="button"
-          variant={sesion === "sesion" ? "light" : "ghost"}
-          className="w=auto min-w-[170px] px-4 py-2 rounded cursor-pointer"
-          onClick={() => setSesion("sesion")}
+        {/* Botones para alternar */}
+        <div className="flex justify-center space-x-4 mt-4">
+          <Button
+            type="button"
+            variant={sesion === "sesion" ? "light" : "ghost"}
+            className="w=auto min-w-[170px] px-4 py-2 rounded cursor-pointer"
+            onClick={() => setSesion("sesion")}
+          >
+            Iniciar Sesión
+          </Button>
+          <Button
+            type="button"
+            variant={sesion === "registro" ? "light" : "ghost"}
+            className="w=auto min-w-[170px] px-4 py-2 rounded cursor-pointer"
+            onClick={() => setSesion("registro")}
+          >
+            Registrarse
+          </Button>
+        </div>
+        <div
+          className={`mt-6 transition-all duration-700 ease-in-out ${
+            animacion ? "opacity-100 translate-y-0" : "opacity-0 translate-y-3"
+          }`}
         >
-          Iniciar Sesión
-        </Button>
-        <Button
-          type="button"
-          variant={sesion === "registro" ? "light" : "ghost"}
-          className="w=auto min-w-[170px] px-4 py-2 rounded cursor-pointer"
-          onClick={() => setSesion("registro")}
-        >
-          Registrarse
-        </Button>
-      </div>
-      <div
-        className={`mt-6 transition-all duration-700 ease-in-out ${
-          animacion ? "opacity-100 translate-y-0" : "opacity-0 translate-y-3"
-        }`}
-      >
-        {sesion === "sesion" ? (
-          <FormularioDeInicioDeSesion />
-        ) : (
-          <FormularioDeRegistro />
-        )}
-      </div>
-    </Card>
+          {sesion === "sesion" ? (
+            <FormularioDeInicioDeSesion />
+          ) : (
+            <FormularioDeRegistro />
+          )}
+        </div>
+      </Card>
+    </PageContainer>
   );
 }

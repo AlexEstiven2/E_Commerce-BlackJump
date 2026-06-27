@@ -12,6 +12,7 @@ export default defineConfig({
     alias: {
       "@": path.resolve(__dirname, "./src"),
       "@reutilizables": path.resolve(__dirname, "./src/componentes/reutilizables"),
+      "@autenticacion": path.resolve(__dirname, "./src/componentes/autenticacion"),
     },
   },
 })

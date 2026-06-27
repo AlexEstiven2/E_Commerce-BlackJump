@@ -8,6 +8,9 @@
             ],
             "@reutilizables/*": [
                 "src/componentes/reutilizables/*"
+            ],
+            "@autenticacion/*": [
+                "src/componentes/autenticacion/*"
             ]
         }
     },
