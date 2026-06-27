@@ -32,7 +32,7 @@ export default function PaginaDeAutenticacion() {
       className={`min-h-screen bg-black text-white flex items-center justify-center px-4`}
     >
       <div
-        className={`w-full max-w-3xl rounded-[2rem] bg-slate-950/40 border border-gray-700 shadow-xl/30 shadow-gray-800  p-8 md:p-12 inset-shadow-sm inset-shadow-gray-500/50`}
+        className={`w-full max-w-3xl rounded-[1rem] bg-black border border-gray-700 shadow-xl/30 shadow-gray-800  p-8 md:p-12 inset-shadow-sm inset-shadow-gray-500/50`}
       >
         <div className="space-y-3 text-center">
           <h1 className="text-4xl font-semibold tracking-tight text-white">
@@ -48,8 +48,8 @@ export default function PaginaDeAutenticacion() {
           <button
             className={`px-4 py-2 rounded cursor-pointer ${
               sesion === "sesion"
-                ? "bg-gray-800 border border-gray-700 shadow-lg/50 shadow-gray-800 text-white inset-shadow-sm inset-shadow-gray-500/50"
-                : "bg-gray-500 border border-gray-800 shadow-lg/50 shadow-gray-800 text-gray-100 inset-shadow-sm inset-shadow-gray-200/50"
+                ? "bg-white border border-gray-800 shadow-lg/50 shadow-gray-800 text-gray-600 inset-shadow-sm inset-shadow-gray-800/50"
+                : "bg-black border border-gray-700 shadow-lg/50 shadow-gray-800 text-white inset-shadow-sm inset-shadow-gray-500/50"
             }`}
             onClick={() => setSesion("sesion")}
           >
@@ -58,8 +58,8 @@ export default function PaginaDeAutenticacion() {
           <button
             className={`px-4 py-2 rounded cursor-pointer ${
               sesion === "registro"
-                ? "bg-gray-800 border border-gray-700 shadow-lg/50 shadow-gray-800 text-white inset-shadow-sm inset-shadow-gray-500/50"
-                : "bg-gray-500 border border-gray-800 shadow-lg/50 shadow-gray-800 text-gray-100 inset-shadow-sm inset-shadow-gray-200/50"
+                ? "bg-white border border-gray-800 shadow-lg/50 shadow-gray-800 text-gray-600 inset-shadow-sm inset-shadow-gray-800/50"
+                : "bg-black border border-gray-700 shadow-lg/50 shadow-gray-800 text-white inset-shadow-sm inset-shadow-gray-500/50"
             }`}
             onClick={() => setSesion("registro")}
           >

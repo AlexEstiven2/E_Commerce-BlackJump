@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Input, Button } from "@reutilizables";
 export default function SignupForm() {
   const [imagenGuardada, setImagenGuardada] = useState(
     localStorage.getItem("imagenPerfil") || null,
@@ -18,14 +19,30 @@ export default function SignupForm() {
   };
   return (
     <>
-      <form>
-        <input type="text" placeholder="Nombre" />
-        <input type="email" placeholder="Correo" />
-        <input type="email" placeholder="Confirmar Correo" />
-        <input type="password" placeholder="Contraseña" />
+      <form className={`space-y-4 flex flex-col justify-center items-center`}>
+        <Input
+          type="text"
+          placeholder="Nombre"
+        />
+        <Input
+          type="email"
+          placeholder="Correo"
+        />
+        <Input
+          type="email"
+          placeholder="Confirmar Correo"
+        />
+        <Input
+          type="password"
+          placeholder="Contraseña"
+        />
         <br />
         <br />
-        <button type="submit">Registrarse</button>
+        <Button
+          type="submit"
+        >
+          Registrarse
+        </Button>
       </form>
     </>
   );
