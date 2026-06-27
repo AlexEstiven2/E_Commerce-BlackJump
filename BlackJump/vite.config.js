@@ -13,6 +13,7 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
       "@reutilizables": path.resolve(__dirname, "./src/componentes/reutilizables"),
       "@autenticacion": path.resolve(__dirname, "./src/componentes/autenticacion"),
+      "@paginas": path.resolve(__dirname, "./src/paginas")
     },
   },
 })

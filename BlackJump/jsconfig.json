@@ -11,6 +11,9 @@
             ],
             "@autenticacion/*": [
                 "src/componentes/autenticacion/*"
+            ],
+            "@paginas/*": [
+                "src/paginas/*"
             ]
         }
     },
