@@ -1,9 +1,8 @@
-import { PaginaDeAutenticacion, PaginaDelPanel } from "@paginas";
-
+import { Rutas } from "@rutas";
 function App() {
   return (
     <>
-      <PaginaDeAutenticacion />
+      <Rutas />
     </>
   );
 }
