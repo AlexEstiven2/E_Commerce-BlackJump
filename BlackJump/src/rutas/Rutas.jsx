@@ -1,20 +1,13 @@
-import {BrowserRouter, Routes, Route, Navigate} from 'react-router-dom';
+import { createBrowserRouter, RouterProvider, Navigate} from 'react-router-dom';
 import { PaginaDelPanel, PaginaDeAutenticacion, PaginaDeError } from '@paginas';
-const rutas = [
+const rutas = createBrowserRouter([
+    {path: "/", element: <Navigate to="/autenticacion" replace/>, label: "Inicio"},
     { path: "/autenticacion", element: <PaginaDeAutenticacion />, label: "Autenticación" },
-    { path: "/panel", element: <PaginaDelPanel />, label: "Panel" }
-]
+    { path: "/panel", element: <PaginaDelPanel />, label: "Panel" },
+    { path: "/error", element: <PaginaDeError />, label: "Error" },
+    { path: "*", element: <Navigate to="/error" replace />, label: "Error" }
+])
 
 export default function Rutas() {
-  return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Navigate to="/autenticacion" replace />} />
-        {rutas.map((ruta, index) => (
-          <Route key={index} path={ruta.path} element={ruta.element} errorElement={<PaginaDeError />} />
-        ))}
-        <Route path="*" element={<Navigate to="/" replace />} />
-      </Routes>
-    </BrowserRouter>
-  );
+  return <RouterProvider router={rutas} />;
 }
