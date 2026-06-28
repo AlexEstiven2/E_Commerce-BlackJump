@@ -46,7 +46,7 @@ export default function PaginaDeAutenticacion() {
         <div className="flex justify-center space-x-4 mt-4">
           <Boton
             type="button"
-            variant={sesion === "sesion" ? "light" : "ghost"}
+            variant={sesion === "sesion" ? "claro" : "fantasma"}
             className="w=auto min-w-[170px] px-4 py-2 rounded cursor-pointer"
             onClick={() => setSesion("sesion")}
           >
@@ -54,7 +54,7 @@ export default function PaginaDeAutenticacion() {
           </Boton>
           <Boton
             type="button"
-            variant={sesion === "registro" ? "light" : "ghost"}
+            variant={sesion === "registro" ? "claro" : "fantasma"}
             className="w=auto min-w-[170px] px-4 py-2 rounded cursor-pointer"
             onClick={() => setSesion("registro")}
           >

@@ -1,14 +1,14 @@
 // Button.jsx
 export default function Boton({
   children,
-  variant = "primary",
+  variant = "primario",
   className = "",
   ...props
 }) {
   const styles = {
-    primary: "w-full bg-black text-white border border-gray-700",
-    light: "bg-white text-gray-700 border border-gray-800",
-    ghost: "bg-black text-white border border-gray-700",
+    primario: "w-full bg-black text-white border border-gray-700",
+    claro: "bg-white text-gray-700 border border-gray-800",
+    fantasma: "bg-black text-white border border-gray-700",
   };
 
   return (
