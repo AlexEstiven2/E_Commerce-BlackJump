@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/layout/Navbar';
@@ -30,6 +31,15 @@ function App() {
             </Routes>
         </Router>
     );
+=======
+function App() {
+  return (
+    <div style={{ textAlign: 'center', marginTop: '50px' }}>
+      <h1>BlackJump E-Commerce</h1>
+      <p>Conexión lista para recibir datos</p>
+    </div>
+  )
+>>>>>>> b689ecfa87369306864f4f31ee46466f852ad1c5
 }
 
 export default App;
