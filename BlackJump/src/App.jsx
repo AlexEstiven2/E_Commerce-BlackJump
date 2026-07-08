@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import BarraDeNavegacion from "./components/componentes-de-diseño/BarraDeNavegacion";
+import BarraDeNavegacion from "./components/BarraDeNavegacion";
 import PaginaDeInicio from "./paginas/PaginaDeInicio";
 import PaginaDeAutenticacion from "./paginas/PaginaDeAutenticacion";
 import "./App.css";

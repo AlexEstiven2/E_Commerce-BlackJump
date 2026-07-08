@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight, ArrowRight } from "lucide-react";
-import BarraLateralInferior from "../components/componentes-de-diseño/BarraLateralInferior";
-import PrendasDeModelos  from "../datos/PrendasDeModelos.js"; // Importa el array desde el archivo de datos
+import BarraLateralInferior from "../components/BarraLateralInferior.jsx";
+import PrendasDeModelos from "../datos/PrendasDeModelos.js"; // Importa el array desde el archivo de datos
 import Diapositivas from "../datos/Diapositivas.js"; // Importa el array desde el archivo de datos
-import Encabezado from "../components/componentes-de-inicio/Encabezado.jsx";
-import Carrusel from "../components/componentes-de-inicio/Carrusel.jsx";
+import Encabezado from "../components/Encabezado.jsx";
+import Carrusel from "../components/Carrusel.jsx";
 const PaginaDeInicio = () => {
   const prendasDeModelos = PrendasDeModelos(); // Importa el array desde el archivo de datos
   return (

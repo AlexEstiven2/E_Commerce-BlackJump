@@ -1,9 +1,8 @@
 import React, { useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion"
-import Diapositivas from "../../datos/Diapositivas";
+import { motion, AnimatePresence } from "framer-motion";
+import Diapositivas from "../datos/Diapositivas";
 import { ChevronLeft, ChevronRight, ArrowRight } from "lucide-react";
 export default function Carrusel() {
-
   const diapositiva = Diapositivas(); // Importa el array desde el archivo de datos
 
   const [currentSlide, setCurrentSlide] = React.useState(0);
