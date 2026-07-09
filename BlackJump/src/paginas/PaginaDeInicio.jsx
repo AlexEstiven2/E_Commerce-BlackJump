@@ -1,7 +1,7 @@
-import React, { useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { ChevronLeft, ChevronRight, ArrowRight } from "lucide-react";
-import {BarraLateralInferior, Encabezado, Carrusel} from "@components";
+import React from "react";
+import { ArrowRight} from "lucide-react";
+import PrendasDeModelos from "@/datos/PrendasDeModelos";
+import { BarraLateralInferior, Encabezado, Carrusel, TarjetaCategoriaCircular } from "@componentes";
 const PaginaDeInicio = () => {
   const prendasDeModelos = PrendasDeModelos(); // Importa el array desde el archivo de datos
   return (
@@ -24,49 +24,26 @@ const PaginaDeInicio = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-5xl mx-auto">
           {/* CABALLEROS */}
-          <div className="flex flex-col items-center group cursor-pointer">
-            <div className="relative w-64 h-64 rounded-full overflow-hidden border border-neutral-800 bg-neutral-900 p-1 group-hover:border-white/50 transition-all duration-500">
-              <img
-                src="/image/Slider/Carruceles_Otros/Opciones/Caba01.jpeg"
-                alt="Caballeros"
-                className="w-full h-full object-cover rounded-full filter grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
-              />
-            </div>
-            <h3 className="mt-6 text-sm tracking-[0.3em] font-medium uppercase text-neutral-400 group-hover:text-white transition-colors">
-              CABALLEROS
-            </h3>
-          </div>
-
+          <TarjetaCategoriaCircular
+            imagen="/image/Slider/Carruceles_Otros/Opciones/Caba01.jpeg"
+            alt="Caballeros"
+            titulo="CABALLEROS"
+          />
           {/* DAMAS */}
-          <div className="flex flex-col items-center group cursor-pointer">
-            <div className="relative w-64 h-64 rounded-full overflow-hidden border border-neutral-800 bg-neutral-900 p-1 group-hover:border-white/50 transition-all duration-500">
-              <img
-                src="/image/Slider/Carruceles_Otros/Opciones/Damas01.jpeg"
-                alt="Damas"
-                className="w-full h-full object-cover rounded-full filter grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
-              />
-            </div>
-            <h3 className="mt-6 text-sm tracking-[0.3em] font-medium uppercase text-neutral-400 group-hover:text-white transition-colors">
-              DAMAS
-            </h3>
-          </div>
-
+          <TarjetaCategoriaCircular
+            imagen="/image/Slider/Carruceles_Otros/Opciones/Damas01.jpeg"
+            alt="Damas"
+            titulo="DAMAS"
+          />
           {/* NIÑOS */}
-          <div className="flex flex-col items-center group cursor-pointer">
-            <div className="relative w-64 h-64 rounded-full overflow-hidden border border-neutral-800 bg-neutral-900 p-1 group-hover:border-white/50 transition-all duration-500">
-              <img
-                src="/image/Slider/Carruceles_Otros/Opciones/Ninnos01.jpeg"
-                alt="Niños"
-                className="w-full h-full object-cover rounded-full filter grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
-              />
-            </div>
-            <h3 className="mt-6 text-sm tracking-[0.3em] font-medium uppercase text-neutral-400 group-hover:text-white transition-colors">
-              NIÑ@S
-            </h3>
-          </div>
+          <TarjetaCategoriaCircular
+            imagen="/image/Slider/Carruceles_Otros/Opciones/Ninnos01.jpeg"
+            alt="Niños"
+            titulo="NIÑOS"
+          />
+
         </div>
       </section>
-
       {/* 4. ALGUNAS DE NUESTRAS PRENDAS (Galería Cinemática Limpia sin jQuery) */}
       <section className="py-20 border-t border-neutral-900 bg-neutral-950 overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 mb-12">
