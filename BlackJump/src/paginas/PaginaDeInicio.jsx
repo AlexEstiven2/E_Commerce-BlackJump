@@ -1,7 +1,7 @@
 import React from "react";
 import { ArrowRight} from "lucide-react";
 import PrendasDeModelos from "@/datos/PrendasDeModelos";
-import { BarraLateralInferior, Encabezado, Carrusel, TarjetaCategoriaCircular } from "@componentes";
+import { BarraLateralInferior, Encabezado, Carrusel, TarjetaCategoriaCircular, TarjetaModeloDestacado } from "@componentes";
 const PaginaDeInicio = () => {
   const prendasDeModelos = PrendasDeModelos(); // Importa el array desde el archivo de datos
   return (
@@ -63,42 +63,13 @@ const PaginaDeInicio = () => {
           <div className="flex gap-4 pr-4 animate-marquee min-w-full shrink-0 group-hover/marquee:[animation-play-state:paused]">
             {/* Renderizado del array original */}
             {prendasDeModelos.map((src, index) => (
-              <div
-                key={`original-${index}`}
-                className="relative w-[180px] sm:w-[220px] lg:w-[260px] aspect-[3/4] bg-neutral-900 rounded-lg overflow-hidden border border-neutral-800/40 group shrink-0"
-              >
-                <img
-                  src={src}
-                  alt={`Modelo ${index + 1}`}
-                  className="w-full h-full object-cover filter grayscale group-hover:grayscale-0 group-hover:scale-102 transition-all duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
-                  <span className="text-[9px] tracking-widest uppercase text-white font-mono flex items-center gap-1">
-                    Diseño Edición Limitada <ArrowRight size={8} />
-                  </span>
-                </div>
-              </div>
+              <TarjetaModeloDestacado key={`original-${index}`} src={src} alt={`Modelo ${index + 1}`} />
             ))}
           </div>
 
-          {/* Duplicado exacto para efecto infinito transparente sin saltos */}
           <div className="flex gap-4 pr-4 animate-marquee min-w-full shrink-0 aria-hidden='true' group-hover/marquee:[animation-play-state:paused]">
             {prendasDeModelos.map((src, index) => (
-              <div
-                key={`duplicate-${index}`}
-                className="relative w-[180px] sm:w-[220px] lg:w-[260px] aspect-[3/4] bg-neutral-900 rounded-lg overflow-hidden border border-neutral-800/40 group shrink-0"
-              >
-                <img
-                  src={src}
-                  alt={`Modelo Dup ${index + 1}`}
-                  className="w-full h-full object-cover filter grayscale group-hover:grayscale-0 group-hover:scale-102 transition-all duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
-                  <span className="text-[9px] tracking-widest uppercase text-white font-mono flex items-center gap-1">
-                    Diseño Edición Limitada <ArrowRight size={8} />
-                  </span>
-                </div>
-              </div>
+              <TarjetaModeloDestacado key={`duplicado-${index}`} src={src} alt={`Modelo ${index + 1}`} />
             ))}
           </div>
         </div>
